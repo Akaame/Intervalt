@@ -1,0 +1,7 @@
+deploy:
+    provider: pypi
+    user:
+    password:
+        secure:
+    on:
+        tags: true

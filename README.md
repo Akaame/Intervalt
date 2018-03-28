@@ -50,7 +50,6 @@ to install this module. This module is yet to be added to PyPI.
 - CI at Travis
 - Create Travis CI script
 - Add this module to Python Package Index
-- Get coverage tool.
 - Meter coverage.
 - Implement AVL
 - Implement RB Tree

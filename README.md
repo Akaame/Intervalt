@@ -24,15 +24,20 @@ Python 2.7.12 is tested on Linux 4.13.0-37-generic #42~16.04.1-Ubuntu.
 - Bintrees conditional dependency addition
 - Node remove feature
 - Python 2 support
+- Create setup file
 
 ## TODO
 - Implement overlap checking operation
 - Test overlap checking operation
-- Create setup file
 - Adapter classes for bintrees.BST, bintrees.RBT, bintrees.AVL 
 - Create examples
+- CI at Travis
+- Create Travis CI script
+- Get coverage tool.
+- Meter coverage.
 - Implement AVL
 - Implement RB Tree
+
 ### Python 2 Support
 
 - This code does not work on Python 2 because @property
@@ -43,6 +48,6 @@ if bintrees is installed or not. Checking method differs in
 different versions. [DONE]
 
 ## Test Results
-Ran 12 tests in 0.001s
+Ran 14 tests in 0.000s
 
-FAILED (failures=1)
+OK

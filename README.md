@@ -30,6 +30,23 @@ or
 
 to install this module. This module is yet to be added to PyPI.
 
+## Quickstart
+```python
+import interval
+# import numpy as np 
+from random import randrange
+
+vals = [(randrange(0,10),randrange(11,20)) for i in range(10)]
+intervals = [interval.Interval(i[0],i[1]) for i in vals]
+nodes = [interval.Node(i) for i in intervals]
+
+tree = interval.IntervalBSTree(nodes[0])
+
+for node in nodes[1:]:
+    tree.add(node)
+print(tree.check_overlap(interval.Interval(0,10)))
+```
+
 ## Features
 - Interval, Node, IntervalTree Structures to encapsulate logic
 - Binary Search Tree based IntervalTree structure is default
@@ -42,13 +59,9 @@ to install this module. This module is yet to be added to PyPI.
 - Adapter classes for bintrees.BinaryTree, bintrees.RBTree, bintrees.AVL 
 
 ## TODO
-- Create string repr functions for classes
-- Make classes pickleable.
-- Correct remove bug at root
+- Make classes pickleable if they are not. Check it.
 - Create Strategy pattern for each tree type
 - Create StrategyFactory pattern for creating IntervalTrees
-- Create examples
-- Add example to here.
 - Add to github
 - CI at Travis
 - Create Travis CI script

@@ -36,6 +36,9 @@ class Interval(object):
             return True
         return False
 
+    def __repr__(self):
+        return "Interval[" +str(self.left) + ", "+str(self.right)+"]"
+
 class Node(object):
     """ Node structure holds an interval """
     def __init__(self, interval):
@@ -79,15 +82,17 @@ class Node(object):
     def left_node(self, value):
         """ Left node setter """
         self._left_node = value
-        value.parent = self
-        self.maxval = max(self.maxval, value.maxval)
-    
+        if value != None:
+            value.parent = self
+            self.maxval = max(self.maxval, value.maxval)
+        
     @right_node.setter
     def right_node(self, value):
         """ Right node setter """
         self._right_node = value
-        value.parent = self
-        self.maxval = max(self.maxval, value.maxval)
+        if value != None:
+            value.parent = self
+            self.maxval = max(self.maxval, value.maxval)
     
     @right_node.deleter
     def right_node(self):
@@ -103,6 +108,14 @@ class Node(object):
     def maxval(self, value):
         """ Max value in subtree setter """
         self._maxval = value
+
+    def __repr__(self):
+        st = "Node holding " + repr(self.interval) 
+        if self.left_node != None:
+            st += " Has left child "
+        if self.right_node != None:
+            st += " Has right child "
+        return st
 
 class IntervalTree(object):
     """
@@ -133,6 +146,9 @@ class IntervalTree(object):
     def check_overlap(self, node):
         """ Check if node overlaps """
         pass
+
+    def __repr__(self):
+        return "Interval tree with root: " + repr(self.root)
 
 class IntervalBSTree(IntervalTree):
     """ 
@@ -167,28 +183,42 @@ class IntervalBSTree(IntervalTree):
         BST Tree remove rule 
         Search according to left value of interval
         """
-        if node == self.root:
-            return
         self._remove(self.root, node)
+
+    def _del(self, gp, p, c):
+            if gp == None:
+                self.root = c
+            elif p == gp.left_node:
+                del gp.left_node # if node is left child
+                gp.left_node = c
+            else:
+                del gp.right_node # if node is left child
+                gp.right_node = c
+            
+    def _findMin(self, node):
+        """ Find leftmost min """
+        n = node
+        while n.left_node != None:
+            n = n.left_node
+        return n
 
     def _remove(self, parent, node):
         pl = parent.interval.left
         nl = node.interval.left
+
         if parent == node:
             # We have found target node
-            gp = parent.parent # get target parent
-            while node.right_node != None:
-                node = node.right_node # get rightmost node 
-            if parent == node: # if they are the same
-                if node == gp.left_node:
-                    del gp.left_node
-                else:
-                    del gp.right_node
-                return
-            parent = node # allocate rightmost
-            parent.parent = gp
-            return
-
+            if node.left_node == None and node.right_node==None:
+                self._del(node.parent, node, None)
+            elif node.left_node != None and node.right_node==None:
+                temp = node.left_node
+                self._del(node.parent, node, temp)
+            elif node.left_node == None and node.right_node!=None:
+                temp = node.right
+                self._del(node.parent, node, temp)
+            else:
+                self._del(node.parent, node,self._findMin(node.right_node))
+            
         if pl > nl:
             if parent.left_node == None:
                 return None
@@ -313,7 +343,7 @@ if bintrees_enabled:
             return None
             
 
-    class IntervalRBTreeBintreesAdapter:
+    class IntervalRBTreeBintreesAdapter(IntervalTree):
         """ 
         I do not know how this adapter pattern should work.
         Or if it is even possible to augment bintrees classes.
@@ -340,7 +370,7 @@ if bintrees_enabled:
                     return v
             return None
 
-    class IntervalAVLTreeBintreesAdapter:
+    class IntervalAVLTreeBintreesAdapter(IntervalTree):
         """ 
         I do not know how this adapter pattern should work.
         Or if it is even possible to augment bintrees classes.

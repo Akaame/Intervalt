@@ -167,6 +167,8 @@ class IntervalBSTree(IntervalTree):
         BST Tree remove rule 
         Search according to left value of interval
         """
+        if node == self.root:
+            return
         self._remove(self.root, node)
 
     def _remove(self, parent, node):
@@ -202,13 +204,31 @@ class IntervalBSTree(IntervalTree):
         """ 
         Check if node overlaps 
         Steps:
-            pass
+            Recursively ->
+            If node overlaps. Return node.
+            Else check condition below
+            condition: node->left is not null and node-left->maxval >= interval->left
+            If condition
+                Check left
+            Else:
+                Check right
         """
         if self.root == None:
             return None
         else:
-            pass
+            return self._check_overlap(self.root, interval)
 
+    def _check_overlap(self, node, interval):
+        if node.interval.check_overlap(interval):
+            return node.interval
+        else:
+            if node.left_node != None and node.left_node.maxval >= interval.left:
+                return self._check_overlap(node.left_node, interval)
+            elif node.right_node !=None:
+                return self._check_overlap(node.right_node, interval)
+            else:
+                return None
+                
 class IntervalAVLTree(IntervalTree):
     """ 
     Interval tree structure that uses simple 

@@ -105,11 +105,17 @@ class IntervalBSTreeTests(unittest.TestCase):
         tree.root = n1
         tree.add(n2)
         self.assertEqual(tree.root.left_node, n2)
-        tree.remove(n2)
-        self.assertIsNone(tree.root.left_node)
+        tree.remove(n1)
+        self.assertIsNone(tree.root, n2)
 
     def test_overlapping(self):
-        pass
+        tree = IntervalBSTree()
+        i1 = Interval(3,4)
+        n1 = Node(i1)
+        i2 = Interval(2,5)
+        tree.root = n1
+        node = tree.check_overlap(i2)
+        self.assertEqual(node, i1)
 
 class IntervalAVLTreeTests(unittest.TestCase):
     NotImplemented

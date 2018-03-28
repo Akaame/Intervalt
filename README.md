@@ -40,7 +40,6 @@ to install this module. This module is yet to be added to PyPI.
 - Create setup file
 - Overlap check operation
 - Adapter classes for bintrees.BinaryTree, bintrees.RBTree, bintrees.AVL 
-- Test adapter classes
 
 ## TODO
 - Correct remove bug at root

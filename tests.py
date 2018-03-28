@@ -123,5 +123,46 @@ class IntervalAVLTreeTests(unittest.TestCase):
 class IntervalRBTreeTests(unittest.TestCase):
     NotImplemented
     
+class BintreesAdaptersTest(unittest.TestCase):
+    def test_bintrees_installed(self):
+        # How do you test this? TODO
+        pass
+
+    def test_bintrees_not_installed(self):
+        pass
+
+    def test_bstree(self):
+        # Not sure how this adapter should work
+        i1 = Interval(4,5)
+        n1 = Node(i1)
+        tree = IntervalBSTreeBintreesAdapter(n1)
+        i2 = Interval(3,6)
+        n2 = Node(i2)
+        tree.add(n2)
+        node = tree.check_overlap(Interval(4,7))
+        self.assertIn(node, [n1, n2])
+    
+    def test_rbtree(self):
+        # Not sure how this adapter should work
+        i1 = Interval(4,5)
+        n1 = Node(i1)
+        tree = IntervalRBTreeBintreesAdapter(n1)
+        i2 = Interval(3,6)
+        n2 = Node(i2)
+        tree.add(n2)
+        node = tree.check_overlap(Interval(4,7))
+        self.assertIn(node, [n1, n2])
+    
+    def test_avltree(self):
+        # Not sure how this adapter should work
+        i1 = Interval(4,5)
+        n1 = Node(i1)
+        tree = IntervalAVLTreeBintreesAdapter(n1)
+        i2 = Interval(3,6)
+        n2 = Node(i2)
+        tree.add(n2)
+        node = tree.check_overlap(Interval(4,7))
+        self.assertIn(node, [n1, n2])
+
 if __name__ == "__main__":
     unittest.main()

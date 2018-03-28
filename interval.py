@@ -284,11 +284,88 @@ if ver == 2:
 print(bintrees_enabled)
 if bintrees_enabled:
     import bintrees
-    class IntervalBSTreeBintreesAdapter:
-        NotImplemented
+    class IntervalBSTreeBintreesAdapter(IntervalTree):
+        """ 
+        I do not know how this adapter pattern should work.
+        Or if it is even possible to augment bintrees classes.
+        Will try to interact underlying bintrees.BinaryTree with
+        IntervalTree interface
+        """
+        def __init__(self, root):
+            # super init TODO
+            self._tree = bintrees.BinaryTree([(root.interval, root)])
+            
+        @property
+        def tree():
+            return self._tree
+
+        def add(self, node):
+            self._tree.insert(node.interval, node)
+
+        def remove(self, node):
+            self._tree.remove(node.interval)
+        
+        def check_overlap(self, interval):
+            for k,v in self._tree.items():
+                if k.check_overlap(interval):
+                    return v
+            return None
+            
 
     class IntervalRBTreeBintreesAdapter:
-        NotImplemented
+        """ 
+        I do not know how this adapter pattern should work.
+        Or if it is even possible to augment bintrees classes.
+        Will try to interact underlying bintrees.BinaryTree with
+        IntervalTree interface
+        """
+        def __init__(self, root):
+            # super init TODO
+            self._tree = bintrees.RBTree([(root.interval, root)])
+            
+        @property
+        def tree():
+            return self._tree
+
+        def add(self, node):
+            self._tree.insert(node.interval, node)
+
+        def remove(self, node):
+            self._tree.remove(node.interval)
+        
+        def check_overlap(self, interval):
+            for k,v in self._tree.items():
+                if k.check_overlap(interval):
+                    return v
+            return None
 
     class IntervalAVLTreeBintreesAdapter:
-        NotImplemented
+        """ 
+        I do not know how this adapter pattern should work.
+        Or if it is even possible to augment bintrees classes.
+        Will try to interact underlying bintrees.BinaryTree with
+        IntervalTree interface
+        """
+        def __init__(self, root):
+            # super init TODO
+            self._tree = bintrees.AVLTree([(root.interval, root)])
+            
+        @property
+        def tree():
+            return self._tree
+
+        def add(self, node):
+            self._tree.insert(node.interval, node)
+
+        def remove(self, node):
+            self._tree.remove(node.interval)
+        
+        def check_overlap(self, interval):
+            for k,v in self._tree.items():
+                if k.check_overlap(interval):
+                    return v
+            return None
+
+# create Strategy Pattern for each tree type TODO
+
+# create a Strategy Factory TODO

@@ -28,7 +28,7 @@ or
 
 [sudo] pip install .
 
-to install this module. 
+to install this module. This module is yet to be added to PyPI.
 
 ## Features
 - Interval, Node, IntervalTree Structures to encapsulate logic
@@ -39,30 +39,33 @@ to install this module.
 - Python 2 support
 - Create setup file
 - Overlap check operation
+- Adapter classes for bintrees.BinaryTree, bintrees.RBTree, bintrees.AVL 
+- Test adapter classes
 
 ## TODO
 - Correct remove bug at root
-- Adapter classes for bintrees.BST, bintrees.RBT, bintrees.AVL 
+- Create Strategy pattern for each tree type
+- Create StrategyFactory pattern for creating IntervalTrees
 - Create examples
+- Create documentation with Sphinx
 - CI at Travis
 - Create Travis CI script
+- Add this module to Python Package Index
 - Get coverage tool.
 - Meter coverage.
 - Implement AVL
 - Implement RB Tree
 - Write further testing
-- Add this module to Python Package Index
 
 ### Python 2 Support
 
-- This code does not work on Python 2 because @property
-decorator is not the same as Python 3 version syntactically.
+- @property decorator is not the same as Python 3 version syntactically.
 This can be solved via deriving classes from object. [DONE]
 - Bintrees conditional dependency needs to check 
 if bintrees is installed or not. Checking method differs in 
 different versions. [DONE]
 
 ## Test Results
-Ran 14 tests in 0.001s
+Ran 19 tests in 0.001s
 
 FAILED (failures=1)

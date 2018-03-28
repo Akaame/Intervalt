@@ -1,6 +1,6 @@
 from distutils.core import setup
 
-url="https://github.com/Akaame/interval",
+url="https://github.com/Akaame/interval"
 version = "0.1.0"
 
 setup(name="Interval",

@@ -4,3 +4,4 @@ build
 docs/Makefile
 docs/source
 docs/build/doctrees
+.coverage

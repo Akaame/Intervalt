@@ -281,9 +281,10 @@ if ver == 2:
     except ImportError:
         bintrees_enabled = False
 
-print(bintrees_enabled)
+
 if bintrees_enabled:
     import bintrees
+    print "Bintrees is enabled"
     class IntervalBSTreeBintreesAdapter(IntervalTree):
         """ 
         I do not know how this adapter pattern should work.

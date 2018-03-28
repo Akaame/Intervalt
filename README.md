@@ -42,15 +42,17 @@ to install this module. This module is yet to be added to PyPI.
 - Adapter classes for bintrees.BinaryTree, bintrees.RBTree, bintrees.AVL 
 
 ## TODO
+- Create string repr functions for classes
+- Make classes pickleable.
 - Correct remove bug at root
 - Create Strategy pattern for each tree type
 - Create StrategyFactory pattern for creating IntervalTrees
 - Create examples
-- Create documentation with Sphinx
+- Add example to here.
+- Add to github
 - CI at Travis
 - Create Travis CI script
 - Add this module to Python Package Index
-- Meter coverage.
 - Implement AVL
 - Implement RB Tree
 - Write further testing
@@ -67,3 +69,18 @@ different versions. [DONE]
 Ran 19 tests in 0.001s
 
 FAILED (failures=1)
+
+## Coverage
+
+If coverage.py is installed
+
+coverage run tests.py
+
+coverage report --omit=/usr/*
+
+gives coverage results.
+
+Current coverage on Interval is %80.
+
+## Documentation
+Documentation can be reached at docs/build/html/index.html.

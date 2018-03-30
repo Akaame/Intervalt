@@ -63,6 +63,7 @@ print(tree.check_overlap(intervalt.Interval(0,10)))
 - Create setup file
 - Overlap check operation
 - Adapter classes for bintrees.BinaryTree, bintrees.RBTree, bintrees.AVL 
+- CI with Travis
 
 ## TODO
 
@@ -71,13 +72,12 @@ print(tree.check_overlap(intervalt.Interval(0,10)))
 - Do a UNIX time interval tree example.
 - Create Strategy pattern for each tree backend
 - Create StrategyFactory pattern for creating IntervalTrees
-- CI at Travis
-- Create Travis CI script
 - Implement AVL
 - Implement RB Tree
 - Write further testing
 - Set verbosity levels
 - Backend options like keras.
+- Try coverall instead of coverage.py
 
 ### Python 2 Support
 
@@ -88,9 +88,9 @@ if bintrees is installed or not. Checking method differs in
 different versions. [DONE]
 
 ## Test Results
-Ran 19 tests in 0.001s
+Ran 20 tests in 0.001s
 
-FAILED (failures=1)
+OK.
 
 ## Coverage
 

@@ -1,7 +1,7 @@
 from distutils.core import setup
 
 url="https://github.com/Akaame/Intervalt"
-version = "0.1.1b"
+version = "0.1.1dev0"
 
 setup(name="intervalt", # change this
 version=version,

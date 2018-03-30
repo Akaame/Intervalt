@@ -1,9 +1,9 @@
 from distutils.core import setup
 
-url="https://github.com/Akaame/Interval"
+url="https://github.com/Akaame/Intervalt"
 version = "0.1.1"
 
-setup(name="Interval",
+setup(name="intervalt", # change this
 version=version,
 description="Interval tree implementation in Python.",
 author="Siddik Acil",

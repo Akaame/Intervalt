@@ -1,7 +1,7 @@
 from distutils.core import setup
 
 url="https://github.com/Akaame/Intervalt"
-version = "0.1.1"
+version = "0.1.1a"
 
 setup(name="intervalt", # change this
 version=version,
@@ -15,5 +15,5 @@ packages=["."]
 
 # To get a download_url ->
 # Steps: 
-# git tag 0.1.0 -m "Add a tag for PyPI"
+# git tag 0.1.0a -m "Add a tag for PyPI"
 # git push --tags origin master

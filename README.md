@@ -8,7 +8,7 @@ so that overlaps can be observed faster.
 
 
 ## Version
-0.1.1
+0.1.1a
 
 ## Python Version
 Python 3 is supported. 

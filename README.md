@@ -1,7 +1,7 @@
 
 # Intervalt
 
-Intervalt tree implementation in Python.
+Interval tree implementation in Python.
 
 Interval trees hold intervals in tree structure 
 so that overlaps can be observed faster.

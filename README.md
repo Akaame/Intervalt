@@ -66,7 +66,6 @@ print(tree.check_overlap(interval.Interval(0,10)))
 - Do a UNIX time interval tree example.
 - Create Strategy pattern for each tree backend
 - Create StrategyFactory pattern for creating IntervalTrees
-- Add to github
 - CI at Travis
 - Create Travis CI script
 - Add this module to Python Package Index

@@ -6,7 +6,7 @@ Interval tree implementation in Python.
 Interval trees hold intervals in tree structure 
 so that overlaps can be observed faster.
 
-https://travis-ci.org/Akaame/Intervalt.svg?branch=master
+[![Build Status](https://travis-ci.org/Akaame/Intervalt.svg?branch=master)](https://travis-ci.org/Akaame/Intervalt)
 
 ## Version
 0.1.1dev0

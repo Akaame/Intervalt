@@ -48,6 +48,7 @@ print(tree.check_overlap(interval.Interval(0,10)))
 ```
 
 ## Features
+
 - Interval, Node, IntervalTree Structures to encapsulate logic
 - Binary Search Tree based IntervalTree structure is default
 - Support Node add operation
@@ -59,8 +60,11 @@ print(tree.check_overlap(interval.Interval(0,10)))
 - Adapter classes for bintrees.BinaryTree, bintrees.RBTree, bintrees.AVL 
 
 ## TODO
+
 - Make classes pickleable if they are not. Check it.
-- Create Strategy pattern for each tree type
+- Do a pickling example
+- Do a UNIX time interval tree example.
+- Create Strategy pattern for each tree backend
 - Create StrategyFactory pattern for creating IntervalTrees
 - Add to github
 - CI at Travis
@@ -69,6 +73,8 @@ print(tree.check_overlap(interval.Interval(0,10)))
 - Implement AVL
 - Implement RB Tree
 - Write further testing
+- Set verbosity levels
+- Backend options like keras.
 
 ### Python 2 Support
 

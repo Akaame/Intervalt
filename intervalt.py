@@ -301,7 +301,9 @@ bintrees_enabled = False
 # if Python 3
 if ver == 3:
     import importlib
+    # print(importlib.util)
     bintrees_enabled = importlib.util.find_spec("bintrees") != None
+    # print(bintrees_enabled)
 # if Python 2
 if ver == 2:
     import imp

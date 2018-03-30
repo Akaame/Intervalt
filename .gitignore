@@ -6,3 +6,6 @@ docs/source
 docs/build/doctrees
 .coverage
 git
+dist
+.vscode
+.pypirc

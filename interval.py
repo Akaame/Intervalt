@@ -314,7 +314,7 @@ if ver == 2:
 
 if bintrees_enabled:
     import bintrees
-    print "Bintrees is enabled"
+    print("Bintrees is enabled")
     class IntervalBSTreeBintreesAdapter(IntervalTree):
         """ 
         I do not know how this adapter pattern should work.

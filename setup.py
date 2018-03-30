@@ -1,6 +1,6 @@
 from distutils.core import setup
 
-url="https://github.com/Akaame/interval"
+url="https://github.com/Akaame/Interval"
 version = "0.1.0"
 
 setup(name="Interval",
@@ -8,7 +8,7 @@ version=version,
 description="Interval tree implementation in Python.",
 author="Siddik Acil",
 url=url,
-download_url=url+"/archive/"+version+".tar.gz", # There will be a download_url here
+# download_url=url+"/archive/"+version+".tar.gz", # There will be a download_url here
 author_email="sddkacil.1@gmail.com", 
 packages=["."]
 )

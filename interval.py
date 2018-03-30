@@ -1,6 +1,6 @@
 """
 ========
-Interval
+Intervalt
 
 Interval tree implementation in Python.
 

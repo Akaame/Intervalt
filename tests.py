@@ -1,5 +1,5 @@
 
-from interval import *
+from intervalt import *
 import unittest
 
 class IntervalTests(unittest.TestCase):

@@ -19,6 +19,10 @@ Python 2.7.12 is tested on Linux 4.13.0-37-generic #42~16.04.1-Ubuntu.
 
 ## Installation
 
+Use PyPI to install this repository.
+
+[sudo] pip install intervalt
+
 Download this repository.
 Use
 
@@ -28,7 +32,7 @@ or
 
 [sudo] pip install .
 
-to install this module. This module is yet to be added to PyPI.
+to install this module.
 
 ## Quickstart
 ```python
@@ -68,7 +72,6 @@ print(tree.check_overlap(intervalt.Interval(0,10)))
 - Create StrategyFactory pattern for creating IntervalTrees
 - CI at Travis
 - Create Travis CI script
-- Add this module to Python Package Index
 - Implement AVL
 - Implement RB Tree
 - Write further testing

@@ -1,7 +1,7 @@
 deploy:
-    provider: pypi
-    user:
-    password:
-        secure:
-    on:
-        tags: true
+  provider: pypi
+  user: Akaame
+  password:
+    secure: rKMX26bCNOWoahuqvbvWNkef/nkWx4FlqkdpXanB4p7rJcsWHlyOPwnXVhhiDCt9gKU3NYjWG716RtpLpq0OIwuftxDTODDPKGxgSXupwGgmNFf92QTHakx/wlbxMa9A/QnzR/+dxdlyi8xEfHsnUMWhfjIqqoCGtKYPZ5axKgcASo5oze9RQbg3ox6lOjDILgiod7FBncqgt3JGY3xAMpKxhP/90ESxdMtTm0QagkfPWo72wFMQBjvvIMLlQNkVAG1Fk6UVH/uvgD0R7qb+gB0Z7PlQZ42vPFC9vySp2jg0KeFmAtr7UrgcIhXXCm2W6leuT7JM5bZ7nlrCv2KiyUtE8wRCGvC5gUjIqoXCc5SVAD2HkAT+cGlpnjpZNqX/+ayu7VcYdE4soYr0VJfELyhB0z9qNFkau1BNKb3qq+5wJcHc0VoA40ffg8bC12NWMfsxThx3X/VeujyfGRcFnYqHAeacbXjeh0VSSgbKhwfyOBbh8md3B9Ry2RsI81PcMn2Pisqqt+pTulXzoTyyko9TExUSR/ICf4iH9Aauuf2Dd+MkTsfnycQdbv7vNlKnindcv9Mrz+NJsmPetfB7U/DAMTe8konPEG5q44wbFjII23wdDLhL6kihxAFXSwUuDqGMtoHoLbISmEhrMJhs7oNqxTowkWjGukLz8OIrmgg=
+  on:
+    tags: true

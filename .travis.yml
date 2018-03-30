@@ -3,6 +3,8 @@ python:
     - "2.7"
     - "3.5"
 
+install: null
+script: tests.py
 deploy:
   provider: pypi
   user: Akaame
